@@ -1,6 +1,6 @@
-GITHUB_CLIENT_ID = "Ov23liuBb1oYIAWYD243"
+GITHUB_CLIENT_ID = "secret"
 GITHUB_CLIENT_SECRET = (
-    "f79e5cd8e8c200b853a3a6d32b1e7bad2632e0b3"
+    "client_secret"
 )
 GITHUB_REDIRECT_URI = (
     "http://localhost:8000/github/auth/token"
