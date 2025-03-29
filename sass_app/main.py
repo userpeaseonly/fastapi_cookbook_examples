@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 from models import Base
 
 from third_party_login import resolve_github_token
-import security, premium_access, rbac, github_login, mfa, api_key
+import security, premium_access, rbac, github_login, mfa, api_key, user_session
 
 
 asynccontextmanager
@@ -24,6 +24,7 @@ app.include_router(rbac.router)
 app.include_router(github_login.router)
 app.include_router(mfa.router)
 app.include_router(api_key.router)
+app.include_router(user_session.router)
 
 
 @app.post("/register/user", response_model=ResponseCreateUser, status_code=status.HTTP_201_CREATED, responses={status.HTTP_201_CREATED: {"description": "User created"}, status.HTTP_409_CONFLICT: {"description": "User already exists"}})
