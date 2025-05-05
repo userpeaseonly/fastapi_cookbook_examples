@@ -5,4 +5,5 @@ class ProtoappUser(HttpUser):
     
     @task
     def hello_world(self):
-        self.client.get("/home")    
+        self.client.get("/home")
+        
